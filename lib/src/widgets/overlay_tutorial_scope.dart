@@ -75,11 +75,7 @@ class _OverlayTutorialScopeState extends State<OverlayTutorialScope> {
           onEntryRectCalculated: () {
             _updateChildren();
           },
-          child: AbsorbPointer(
-            absorbing: widget.enabled && widget.absorbPointer,
-            ignoringSemantics: true,
-            child: widget.child,
-          ),
+          child: widget.child,
         ),
         if (widget.enabled) ...[
           ..._overlayTutorialHoles.entries
